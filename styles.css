@@ -1,0 +1,28 @@
+.contactImage{
+	width:70px;
+	height: 70px;
+	grid-area: image;
+}
+
+.contactItem {
+	padding: 10px 0px;
+	display: grid;
+	grid-template-columns: 70px 10px 150px auto;
+	grid-template-rows: 35px 35px;
+	grid-template-areas: 
+		"image . name forname"
+		"image . mail mail "
+}
+
+.contactEmail {
+	grid-area: mail;
+
+}
+
+.name {
+	grid-area: name;
+}
+
+.forname {
+	grid-area: forname;
+}
