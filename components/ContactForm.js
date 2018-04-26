@@ -5,27 +5,15 @@ var ContactForm = React.createClass({
 
   render: function() {
     return (
-      React.createElement('form', {className: 'contactForm'},
-        React.createElement('input', {
-          type: 'text',
-          placeholder: 'Imię',
-          value: this.props.contact.firstName,
-          className: 'form-control',
-        }),
-        React.createElement('input', {
-          type: 'text',
-          placeholder: 'Nazwisko',
-          value: this.props.contact.lastName,
-          className: 'form-control',
-        }),
-        React.createElement('input', {
-          type: 'email',
-          placeholder: 'Email',
-          value: this.props.contact.email,
-          className: 'form-control',
-        }),
-        React.createElement('button', {type: 'submit', className: 'btn btn-primary'}, "Dodaj kontakt")
-      )
+      <div className={'contactItem'}>
+          <img className={'contactImage'} src={'link-do-obrazka.png'}/>
+          <p className={'contactLabel'}>
+              Imię: {this.props.contact.firstName}
+          </p>
+          <a href={'mailto:' + this.props.item.email}>
+              {this.props.item.email}
+          </a>
+      </div>
     )
   },
 })
